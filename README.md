@@ -63,3 +63,31 @@ client.get<User>('/users/1').then(user => {
 Use `post`, `put`, and `delete` for the other HTTP methods. The default export
 `apiClient` creates a client with no base URL, which can be used directly for
 simple requests.
+
+## State Management
+
+Redux Toolkit manages the application's global state. Store setup and slices
+live under `src/store`. Typed hooks are provided for dispatching actions and
+selecting state:
+
+```ts
+import { useAppDispatch, useAppSelector } from './src/store/hooks'
+```
+
+The store is connected via the `Provider` component in `src/main.tsx`.
+
+### Authentication State
+
+`src/store/authSlice.ts` manages the currently authenticated user. Login and
+logout actions update the stored `user` and authentication `token`:
+
+```ts
+dispatch(login({ user, token }))
+dispatch(logout())
+```
+
+Use the typed selector to access the current user:
+
+```ts
+const user = useAppSelector(state => state.auth.user)
+```

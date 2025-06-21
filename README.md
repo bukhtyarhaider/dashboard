@@ -35,6 +35,11 @@ To create a production build:
 npm run build
 ```
 
+## Routing
+
+React Router is used for client-side routing. Routes are defined in
+`src/App.tsx` and page components live under `src/pages`.
+
 ## API client
 
 `src/services/client.ts` contains a small helper around `fetch` for talking to

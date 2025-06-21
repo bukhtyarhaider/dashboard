@@ -2,6 +2,22 @@
 
 This project is a starter admin dashboard built with React, TypeScript, and Vite. It includes Tailwind CSS v4 for styling.
 
+## Directory Structure
+
+```
+src/
+  assets/      # images, svgs
+  components/  # reusable UI components
+  layouts/     # application shells
+  pages/       # feature views
+  hooks/       # custom React hooks
+  services/    # API clients
+  store/       # state management
+  types/       # shared TypeScript interfaces
+  utils/       # helpers and formatters
+  config/      # environment and constants
+```
+
 ## Development
 
 Install dependencies (requires Node.js) and start the development server:
@@ -21,11 +37,11 @@ npm run build
 
 ## API client
 
-`src/api/client.ts` contains a small helper around `fetch` for talking to
+`src/services/client.ts` contains a small helper around `fetch` for talking to
 external APIs. It is written in TypeScript and can be used with any REST API.
 
 ```ts
-import { ApiClient } from './src/api/client'
+import { ApiClient } from './src/services/client'
 
 const client = new ApiClient({ baseUrl: 'https://api.example.com' })
 

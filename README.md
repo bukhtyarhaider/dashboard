@@ -8,6 +8,10 @@ This project is a starter admin dashboard built with React, TypeScript, and Vite
 src/
   assets/      # images, svgs
   components/  # reusable UI components
+    ui/
+      atoms/      # basic elements
+      molecules/  # composed pieces
+      organisms/  # complex widgets
   layouts/     # application shells
   pages/       # feature views
   hooks/       # custom React hooks

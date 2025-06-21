@@ -91,3 +91,11 @@ Use the typed selector to access the current user:
 ```ts
 const user = useAppSelector(state => state.auth.user)
 ```
+
+## Middleware & Side Effects
+
+- Redux Toolkit's default thunk middleware handles async actions.
+- A custom logger middleware prints dispatched actions in development.
+- Axios interceptors attach the auth token and handle errors globally.
+- Errors trigger toast notifications via the `ToastProvider` component.
+- Failed requests are retried once for transient network or server issues.
